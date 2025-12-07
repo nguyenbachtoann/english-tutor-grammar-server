@@ -5,17 +5,15 @@ const axios = require('axios'); // Dùng Axios thay cho fetch để ổn định
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // Cấu hình CORS
 app.use(cors({
-    origin: '*', // Trong production nên đổi thành domain của App bạn (ví dụ: https://my-app.vercel.app)
+    origin: '*', // Trong production nên đổi thành domain của App bạn
     methods: ['GET', 'POST']
 }));
 
-app.use(express.json());
-
-// Sử dụng express.json() và tăng giới hạn kích thước body (khắc phục lỗi tiềm ẩn)
+// Sử dụng express.json() và tăng giới hạn kích thước body
 app.use(express.json({ limit: '5mb' }));
 
 // Lấy API Key từ biến môi trường
@@ -31,43 +29,58 @@ app.post('/api/generate', async (req, res) => {
       return res.status(500).json({ error: "Server chưa cấu hình API Key" });
     }
 
+    if (!prompt) {
+      return res.status(400).json({ error: "Prompt is required" });
+    }
+
     // Cấu hình body gửi sang Gemini
+    // LƯU Ý QUAN TRỌNG: Cấu trúc phải đúng chuẩn Google API
     const body = {
-      // Sử dụng model gemini-2.5-flash để hỗ trợ JSON và System Instruction tốt hơn
-      model: "gemini-2.5-flash",
-      contents: [{ role: "user", parts: [{ text: prompt }] }],
-      config: {
+      // 1. Contents
+      contents: [
+        {
+          role: "user",
+          parts: [{ text: prompt }]
+        }
+      ],
+
+      // 2. Generation Config (KHÔNG DÙNG "config")
+      generationConfig: {
         temperature: 0.7,
-        maxOutputTokens: 2048, // Tăng giới hạn đầu ra token
+        maxOutputTokens: 2048,
+        topP: 0.95,
+        topK: 40,
+        // Nếu bật jsonMode thì set responseMimeType
+        responseMimeType: jsonMode ? "application/json" : "text/plain"
       }
     };
 
+    // 3. System Instruction (Nằm ngang hàng với contents, KHÔNG nằm trong config)
     if (systemInstruction) {
-      // Thêm System Instruction (Hướng dẫn hệ thống) vào cấu hình
-      body.config.systemInstruction = systemInstruction;
+      body.systemInstruction = {
+        parts: [{ text: systemInstruction }]
+      };
     }
 
-    if (jsonMode) {
-      // Bật chế độ JSON Mode
-      body.config.responseMimeType = "application/json";
-    }
+    // Chọn Model (nằm trên URL)
+    // Bạn có thể đổi thành 'gemini-1.5-pro' hoặc 'gemini-2.0-flash-exp' tùy nhu cầu
+    const MODEL_NAME = "gemini-1.5-flash";
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${GEMINI_API_KEY}`;
 
     // Gọi Google Gemini API bằng AXIOS
-    const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`,
-      body,
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        }
+    const response = await axios.post(url, body, {
+      headers: {
+        'Content-Type': 'application/json'
       }
-    );
+    });
 
     // Axios tự động parse JSON, data nằm trong response.data
     const data = response.data;
+
+    // Lấy text an toàn
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
 
-    res.json({ text });
+    res.json({ result: text, raw: data });
 
   } catch (error) {
     // Xử lý lỗi chi tiết từ Axios
@@ -90,7 +103,7 @@ app.post('/api/generate', async (req, res) => {
   }
 });
 
-// Health check endpoint (để Render biết server còn sống)
+// Health check endpoint
 app.get('/', (req, res) => {
   res.send('GrammarFlow Server is running!');
 });
