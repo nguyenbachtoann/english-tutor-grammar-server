@@ -1,15 +1,19 @@
-// Cài đặt: npm install express cors dotenv node-fetch
+// Cài đặt: npm install express cors dotenv axios
 const express = require('express');
 const cors = require('cors');
-// Phải require node-fetch để đảm bảo hàm fetch hoạt động
-const fetch = require('node-fetch'); 
+const axios = require('axios'); // Dùng Axios thay cho fetch để ổn định hơn
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Cho phép App của bạn gọi vào (CORS)
-app.use(cors());
+// Cấu hình CORS
+app.use(cors({
+    origin: '*', // Trong production nên đổi thành domain của App bạn (ví dụ: https://my-app.vercel.app)
+    methods: ['GET', 'POST']
+}));
+
+app.use(express.json());
 
 // Sử dụng express.json() và tăng giới hạn kích thước body (khắc phục lỗi tiềm ẩn)
 app.use(express.json({ limit: '5mb' }));
@@ -23,17 +27,14 @@ app.post('/api/generate', async (req, res) => {
     const { prompt, systemInstruction, jsonMode } = req.body;
 
     if (!GEMINI_API_KEY) {
-      return res.status(500).json({ error: "Server chưa cấu hình API Key. Vui lòng kiểm tra file .env" });
-    }
-
-    if (!prompt) {
-      return res.status(400).json({ error: "Thiếu 'prompt' trong yêu cầu." });
+      console.error("Lỗi: Server chưa có API Key");
+      return res.status(500).json({ error: "Server chưa cấu hình API Key" });
     }
 
     // Cấu hình body gửi sang Gemini
     const body = {
       // Sử dụng model gemini-2.5-flash để hỗ trợ JSON và System Instruction tốt hơn
-      model: "gemini-2.5-flash", 
+      model: "gemini-2.5-flash",
       contents: [{ role: "user", parts: [{ text: prompt }] }],
       config: {
         temperature: 0.7,
@@ -51,36 +52,49 @@ app.post('/api/generate', async (req, res) => {
       body.config.responseMimeType = "application/json";
     }
 
-    // Gọi Google Gemini API từ Server
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${body.model}:generateContent?key=${GEMINI_API_KEY}`,
+    // Gọi Google Gemini API bằng AXIOS
+    const response = await axios.post(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`,
+      body,
       {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
+        headers: {
+          'Content-Type': 'application/json'
+        }
       }
     );
 
-    const data = await response.json();
-
-    if (!response.ok) {
-      // Lỗi HTTP từ API (ví dụ: 400, 403, 500)
-      console.error("Gemini API Error Response:", data);
-      throw new Error(data.error?.message || 'Lỗi từ Gemini API');
-    }
-
-    // Trả kết quả về cho Frontend
-    // Kiểm tra và lấy nội dung từ phản hồi của Gemini
+    // Axios tự động parse JSON, data nằm trong response.data
+    const data = response.data;
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
-    res.json({ text, data });
+
+    res.json({ text });
 
   } catch (error) {
-    console.error("Lỗi Server:", error.message);
-    res.status(500).json({ error: "Lỗi xử lý từ server", details: error.message });
+    // Xử lý lỗi chi tiết từ Axios
+    if (error.response) {
+      // Lỗi từ phía Google trả về (400, 500...)
+      console.error("Gemini API Error:", error.response.data);
+      res.status(error.response.status).json({
+        error: "Lỗi từ Gemini API",
+        details: error.response.data
+      });
+    } else if (error.request) {
+      // Không nhận được phản hồi
+      console.error("No response from Gemini:", error.request);
+      res.status(503).json({ error: "Không thể kết nối tới Gemini" });
+    } else {
+      // Lỗi cấu hình request
+      console.error("Server Error:", error.message);
+      res.status(500).json({ error: "Lỗi xử lý nội bộ server" });
+    }
   }
 });
 
-// Khởi động Server
+// Health check endpoint (để Render biết server còn sống)
+app.get('/', (req, res) => {
+  res.send('GrammarFlow Server is running!');
+});
+
 app.listen(PORT, () => {
   console.log(`Server đang chạy tại http://localhost:${PORT}`);
 });
