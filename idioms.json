@@ -1,0 +1,238 @@
+{
+  "idioms_General": {
+    "title": "Thành Ngữ Thông Dụng (General)",
+    "overview": "Các thành ngữ tiếng Anh phổ biến dùng trong giao tiếp hàng ngày.",
+    "formula": [
+      { "type": "positive", "label": "Piece of cake", "struct": "Dễ như ăn kẹo (Rất dễ)" },
+      { "type": "positive", "label": "Break a leg", "struct": "Chúc may mắn (dùng trước khi biểu diễn)" },
+      { "type": "positive", "label": "Under the weather", "struct": "Cảm thấy mệt mỏi, không khỏe" },
+      { "type": "positive", "label": "Spill the beans", "struct": "Tiết lộ bí mật" },
+      { "type": "positive", "label": "A blessing in disguise", "struct": "Trong cái rủi có cái may" },
+      { "type": "positive", "label": "Better late than never", "struct": "Muộn còn hơn không" },
+      { "type": "positive", "label": "Bite the bullet", "struct": "Cắn răng chịu đựng / Quyết tâm làm việc khó khăn" },
+      { "type": "positive", "label": "Call it a day", "struct": "Kết thúc một ngày làm việc" },
+      { "type": "positive", "label": "Cut corners", "struct": "Làm tắt, làm ẩu (thường để tiết kiệm tiền/thời gian)" },
+      { "type": "positive", "label": "Easy does it", "struct": "Cứ từ từ, cẩn thận" },
+      { "type": "positive", "label": "Get out of hand", "struct": "Mất kiểm soát" },
+      { "type": "positive", "label": "Hang in there", "struct": "Đừng bỏ cuộc, hãy kiên trì" },
+      { "type": "positive", "label": "Hit the sack/hay", "struct": "Đi ngủ" },
+      { "type": "positive", "label": "It's not rocket science", "struct": "Nó không quá khó hiểu (không phải khoa học tên lửa)" },
+      { "type": "positive", "label": "Let someone off the hook", "struct": "Tha cho ai đó, không trừng phạt" },
+      { "type": "positive", "label": "Make a long story short", "struct": "Tóm lại là, nói ngắn gọn là" },
+      { "type": "positive", "label": "Miss the boat", "struct": "Bỏ lỡ cơ hội" },
+      { "type": "positive", "label": "No pain, no gain", "struct": "Khổ học thành tài / Không gian nan không có thành quả" },
+      { "type": "positive", "label": "On the ball", "struct": "Nhanh nhẹn, tinh ý" },
+      { "type": "positive", "label": "Pull yourself together", "struct": "Bình tĩnh lại, kiềm chế cảm xúc" }
+    ],
+    "usage": ["Dùng để làm câu nói tự nhiên hơn.", "Tránh dịch word-by-word."],
+    "signs": ["Trong phim ảnh", "Giao tiếp hàng ngày"],
+    "examples": [
+      { "en": "The test was a piece of cake.", "vi": "Bài kiểm tra rất dễ." },
+      { "en": "I'm feeling a bit under the weather.", "vi": "Tôi thấy hơi mệt trong người." }
+    ]
+  },
+  "idioms_Rhyming_Playful": {
+    "title": "Thành Ngữ Có Vần & Vui Nhộn (Rhyming & Playful)",
+    "overview": "Các cụm từ có vần điệu, vui nhộn thường dùng để tạo không khí thoải mái, trêu đùa hoặc nói chuyện với trẻ em.",
+    "formula": [
+      { "type": "positive", "label": "Easy peasy lemon squeezy", "struct": "Dễ ợt, cực kỳ đơn giản" },
+      { "type": "positive", "label": "See you later, alligator", "struct": "Hẹn gặp lại nhé (cách nói đùa)" },
+      { "type": "positive", "label": "In a while, crocodile", "struct": "Hẹn lát gặp lại (đáp lại câu alligator)" },
+      { "type": "positive", "label": "Okey-dokey", "struct": "Ok luôn, đồng ý" },
+      { "type": "positive", "label": "Holy moly", "struct": "Trời đất ơi (ngạc nhiên)" },
+      { "type": "positive", "label": "Chill pill", "struct": "Bình tĩnh lại (uống viên thuốc bình tĩnh)" },
+      { "type": "positive", "label": "Winner winner chicken dinner", "struct": "Thắng rồi! (ăn mừng chiến thắng)" },
+      { "type": "positive", "label": "Super duper", "struct": "Cực kỳ tốt, tuyệt vời" },
+      { "type": "positive", "label": "Double trouble", "struct": "Rắc rối nhân đôi" },
+      { "type": "positive", "label": "Teenie-weenie", "struct": "Nhỏ xíu, bé tí tẹo" },
+      { "type": "positive", "label": "Dream team", "struct": "Đội hình trong mơ" },
+      { "type": "positive", "label": "Wheeler dealer", "struct": "Người giỏi xoay xở/kinh doanh (đôi khi hơi mánh khóe)" },
+      { "type": "positive", "label": "Even steven", "struct": "Hòa nhau, công bằng" },
+      { "type": "positive", "label": "No go", "struct": "Không được, không khả thi" },
+      { "type": "positive", "label": "Lovey-dovey", "struct": "Sến súa, quá đa tình (cặp đôi)" },
+      { "type": "positive", "label": "Hocus-pocus", "struct": "Ba hoa chích chòe/Trò ảo thuật" },
+      { "type": "positive", "label": "Mumbo jumbo", "struct": "Lời nói vô nghĩa, rắc rối khó hiểu" },
+      { "type": "positive", "label": "Namby-pamby", "struct": "Yếu đuối, ủy mị" },
+      { "type": "positive", "label": "Pitter-patter", "struct": "Tiếng lạch bạch (mưa hoặc chân trẻ con)" },
+      { "type": "positive", "label": "Walkie-talkie", "struct": "Máy bộ đàm" }
+    ],
+    "usage": ["Dùng trong giao tiếp thân mật.", "Tránh dùng trong văn bản trang trọng."],
+    "signs": ["fun", "rhyme", "casual"],
+    "examples": [
+      { "en": "Fixing this computer is easy peasy lemon squeezy.", "vi": "Sửa cái máy tính này dễ ợt ấy mà." },
+      { "en": "I'm leaving now! - See you later, alligator!", "vi": "Tớ đi đây! - Hẹn gặp lại nhé!" }
+    ]
+  },
+  "idioms_Work_Success": {
+    "title": "Công Việc & Thành Công (Work & Success)",
+    "overview": "Thành ngữ dùng trong môi trường văn phòng, kinh doanh và sự nghiệp.",
+    "formula": [
+      { "type": "positive", "label": "Get the ball rolling", "struct": "Bắt đầu triển khai cái gì đó" },
+      { "type": "positive", "label": "Burn the midnight oil", "struct": "Thức khuya làm việc/học tập" },
+      { "type": "positive", "label": "Back to the drawing board", "struct": "Bắt đầu lại từ đầu (vì kế hoạch trước thất bại)" },
+      { "type": "positive", "label": "Go the extra mile", "struct": "Nỗ lực nhiều hơn mong đợi" },
+      { "type": "positive", "label": "In the loop", "struct": "Được nắm bắt thông tin thường xuyên" },
+      { "type": "positive", "label": "Keep someone posted", "struct": "Cập nhật tình hình cho ai đó" },
+      { "type": "positive", "label": "Learn the ropes", "struct": "Học những điều cơ bản nhất của một công việc" },
+      { "type": "positive", "label": "Off the top of my head", "struct": "Nói theo trí nhớ (chưa kiểm chứng kỹ)" },
+      { "type": "positive", "label": "On the same page", "struct": "Cùng chung ý kiến, đồng quan điểm" },
+      { "type": "positive", "label": "Play it by ear", "struct": "Tùy cơ ứng biến" },
+      { "type": "positive", "label": "Put something on ice", "struct": "Trì hoãn một việc gì đó" },
+      { "type": "positive", "label": "See eye to eye", "struct": "Đồng tình hoàn toàn với ai" },
+      { "type": "positive", "label": "Think outside the box", "struct": "Sáng tạo, tư duy đột phá" },
+      { "type": "positive", "label": "Up in the air", "struct": "Vẫn chưa quyết định, còn lơ lửng" },
+      { "type": "positive", "label": "Word of mouth", "struct": "Truyền miệng" },
+      { "type": "positive", "label": "Work like a charm", "struct": "Hoạt động cực kỳ hiệu quả" },
+      { "type": "positive", "label": "The bottom line", "struct": "Điểm mấu chốt, kết quả cuối cùng" },
+      { "type": "positive", "label": "Cut to the chase", "struct": "Đi thẳng vào vấn đề" },
+      { "type": "positive", "label": "Touch base", "struct": "Liên lạc lại với ai đó" },
+      { "type": "positive", "label": "Bring home the bacon", "struct": "Kiếm tiền nuôi gia đình" }
+    ],
+    "usage": ["Dùng trong email công việc.", "Dùng trong các buổi họp."],
+    "signs": ["office", "project", "business"],
+    "examples": [
+      { "en": "We need to get the ball rolling on this project.", "vi": "Chúng ta cần bắt đầu triển khai dự án này." },
+      { "en": "I've been burning the midnight oil to finish the report.", "vi": "Tôi đã thức khuya để hoàn thành bản báo cáo." }
+    ]
+  },
+  "idioms_Emotion_Feelings": {
+    "title": "Cảm Xúc & Tâm Trạng (Emotions & Feelings)",
+    "overview": "Mô tả trạng thái vui, buồn, tức giận hay lo lắng.",
+    "formula": [
+      { "type": "positive", "label": "On cloud nine", "struct": "Rất hạnh phúc, sung sướng" },
+      { "type": "positive", "label": "Over the moon", "struct": "Cực kỳ vui sướng" },
+      { "type": "positive", "label": "Down in the dumps", "struct": "Cảm thấy buồn bã, thất vọng" },
+      { "type": "positive", "label": "Bent out of shape", "struct": "Nổi giận, khó chịu" },
+      { "type": "positive", "label": "Drive someone up the wall", "struct": "Làm ai đó phát điên/cực kỳ khó chịu" },
+      { "type": "positive", "label": "Have a change of heart", "struct": "Thay đổi ý định/suy nghĩ" },
+      { "type": "positive", "label": "Make one's blood boil", "struct": "Làm ai đó giận sôi máu" },
+      { "type": "positive", "label": "Feel like a million dollars", "struct": "Cảm thấy tuyệt vời, tràn đầy sức sống" },
+      { "type": "positive", "label": "Butterflies in one's stomach", "struct": "Cảm giác bồn chồn, lo lắng (vừa vui vừa sợ)" },
+      { "type": "positive", "label": "Keep one's chin up", "struct": "Giữ vững sự lạc quan" },
+      { "type": "positive", "label": "Scared to death", "struct": "Sợ chết khiếp" },
+      { "type": "positive", "label": "Walking on air", "struct": "Cảm giác nhẹ tênh vì quá hạnh phúc" },
+      { "type": "positive", "label": "At the end of one's rope", "struct": "Hết sạch kiên nhẫn/sức lực" },
+      { "type": "positive", "label": "Head over heels", "struct": "Si mê, yêu say đắm" },
+      { "type": "positive", "label": "Be in two minds", "struct": "Phân vân, chưa quyết định được" },
+      { "type": "positive", "label": "Lose one's cool", "struct": "Mất bình tĩnh" },
+      { "type": "positive", "label": "Pleased as punch", "struct": "Rất hài lòng" },
+      { "type": "positive", "label": "Green with envy", "struct": "Ghen tị đỏ mắt" },
+      { "type": "positive", "label": "Get cold feet", "struct": "Lo lắng, sợ hãi trước một sự kiện lớn" },
+      { "type": "positive", "label": "On edge", "struct": "Căng thẳng, bồn chồn" }
+    ],
+    "usage": ["Mô tả cảm xúc cá nhân.", "Viết nhật ký hoặc tiểu thuyết."],
+    "signs": ["happy", "sad", "angry"],
+    "examples": [
+      { "en": "She was on cloud nine after passing the exam.", "vi": "Cô ấy cực kỳ sung sướng sau khi đậu kỳ thi." },
+      { "en": "I had butterflies in my stomach before the interview.", "vi": "Tôi thấy bồn chồn lo lắng trước buổi phỏng vấn." }
+    ]
+  },
+  "idioms_Relationships": {
+    "title": "Con Người & Mối Quan Hệ (People & Relationships)",
+    "overview": "Cách mô tả tính cách con người và các mối quan hệ xã hội.",
+    "formula": [
+      { "type": "positive", "label": "Birds of a feather", "struct": "Ngưu tầm ngưu, mã tầm mã" },
+      { "type": "positive", "label": "A shoulder to cry on", "struct": "Một người để tâm sự/dựa dẫm lúc buồn" },
+      { "type": "positive", "label": "The apple of one's eye", "struct": "Người được ai đó yêu quý nhất" },
+      { "type": "positive", "label": "Break the ice", "struct": "Phá vỡ bầu không khí ngần ngại lúc đầu" },
+      { "type": "positive", "label": "Build bridges", "struct": "Xây dựng mối quan hệ tốt đẹp" },
+      { "type": "positive", "label": "Fair-weather friend", "struct": "Bạn lúc vui thì có, lúc khó thì không" },
+      { "type": "positive", "label": "Give someone the cold shoulder", "struct": "Phớt lờ, lạnh nhạt với ai đó" },
+      { "type": "positive", "label": "Know someone like the back of one's hand", "struct": "Hiểu rõ ai đó như lòng bàn tay" },
+      { "type": "positive", "label": "Like two peas in a pod", "struct": "Giống nhau như đúc" },
+      { "type": "positive", "label": "Speak the same language", "struct": "Có cùng chung suy nghĩ/thấu hiểu nhau" },
+      { "type": "positive", "label": "Tie the knot", "struct": "Kết hôn" },
+      { "type": "positive", "label": "Your heart of gold", "struct": "Tấm lòng nhân hậu, tốt bụng" },
+      { "type": "positive", "label": "A couch potato", "struct": "Người lười biếng, chỉ ngồi xem TV" },
+      { "type": "positive", "label": "Big mouth", "struct": "Người hay huênh hoang/không giữ được bí mật" },
+      { "type": "positive", "label": "Black sheep", "struct": "Kẻ khác biệt (thường theo nghĩa tiêu cực) trong gia đình" },
+      { "type": "positive", "label": "Dark horse", "struct": "Nhân tố bí ẩn, người có tài năng ẩn giấu" },
+      { "type": "positive", "label": "Life of the party", "struct": "Linh hồn của buổi tiệc" },
+      { "type": "positive", "label": "Old soul", "struct": "Người có tâm hồn già dặn" },
+      { "type": "positive", "label": "The elephant in the room", "struct": "Một vấn đề lớn hiển nhiên nhưng ai cũng tránh nói tới" },
+      { "type": "positive", "label": "Through thick and thin", "struct": "Vượt qua mọi khó khăn cùng nhau" }
+    ],
+    "usage": ["Dùng khi kể chuyện về bạn bè.", "Mô tả tính cách một ai đó."],
+    "signs": ["friends", "family", "personality"],
+    "examples": [
+      { "en": "My brother and I are like two peas in a pod.", "vi": "Anh tôi và tôi giống nhau như đúc." },
+      { "en": "They stayed together through thick and thin.", "vi": "Họ đã ở bên nhau vượt qua mọi thăng trầm khó khăn." }
+    ]
+  },
+  "idioms_Money": {
+    "title": "Thành Ngữ Về Tiền Bạc (Money)",
+    "overview": "Các cụm từ diễn tả sự giàu có, nghèo khó hoặc chi tiêu.",
+    "formula": [
+      { "type": "positive", "label": "Cost an arm and a leg", "struct": "Rất đắt đỏ" },
+      { "type": "positive", "label": "Born with a silver spoon", "struct": "Sinh ra trong gia đình giàu có" },
+      { "type": "positive", "label": "Save for a rainy day", "struct": "Tiết kiệm phòng khi khó khăn" },
+      { "type": "positive", "label": "Make ends meet", "struct": "Kiếm đủ sống" },
+      { "type": "positive", "label": "Break the bank", "struct": "Tốn quá nhiều tiền" },
+      { "type": "positive", "label": "Dirt cheap", "struct": "Rẻ như bèo" },
+      { "type": "positive", "label": "From rags to riches", "struct": "Từ tay trắng làm nên đại nghiệp" },
+      { "type": "positive", "label": "In the red", "struct": "Đang mắc nợ/thua lỗ" },
+      { "type": "positive", "label": "Pour money down the drain", "struct": "Ném tiền qua cửa sổ" },
+      { "type": "positive", "label": "Tighten one's belt", "struct": "Thắt lưng buộc bụng (tiết kiệm)" }
+    ],
+    "usage": ["Dùng khi nói về tài chính, mua sắm."],
+    "signs": ["expensive", "rich", "poor"],
+    "examples": [
+      { "en": "That car costs an arm and a leg.", "vi": "Chiếc xe đó đắt cắt cổ." },
+      { "en": "It's hard to make ends meet these days.", "vi": "Thời buổi này kiếm đủ sống thật khó." }
+    ]
+  },
+  "idioms_Time": {
+    "title": "Thành Ngữ Về Thời Gian (Time)",
+    "overview": "Diễn tả tần suất, sự trôi qua của thời gian.",
+    "formula": [
+      { "type": "positive", "label": "Once in a blue moon", "struct": "Rất hiếm khi xảy ra" },
+      { "type": "positive", "label": "Time flies", "struct": "Thời gian trôi nhanh" },
+      { "type": "positive", "label": "Better late than never", "struct": "Muộn còn không" },
+      { "type": "positive", "label": "Around the clock", "struct": "Suốt ngày đêm (24/7)" },
+      { "type": "positive", "label": "In the nick of time", "struct": "Vừa kịp lúc (sát nút)" },
+      { "type": "positive", "label": "Kill time", "struct": "Giết thời gian" },
+      { "type": "positive", "label": "Call it a day", "struct": "Nghỉ tay, kết thúc công việc" },
+      { "type": "positive", "label": "Behind the times", "struct": "Lỗi thời, lạc hậu" },
+      { "type": "positive", "label": "Time is money", "struct": "Thời gian là vàng bạc" },
+      { "type": "positive", "label": "Beat the clock", "struct": "Hoàn thành trước thời hạn" }
+    ],
+    "usage": ["Dùng để nhấn mạnh thời gian."],
+    "signs": ["rarely", "fast", "late"],
+    "examples": [
+      { "en": "I go there once in a blue moon.", "vi": "Tôi hiếm khi đến đó lắm." },
+      { "en": "Time flies when you have fun.", "vi": "Vui vẻ thì thời gian trôi nhanh lắm." }
+    ]
+  },
+  "idioms_Wisdom_Actions": {
+    "title": "Hành Động & Lời Khuyên (Actions & Advice)",
+    "overview": "Các câu thành ngữ mang tính triết lý hoặc mô tả cách xử lý tình huống.",
+    "formula": [
+      { "type": "positive", "label": "A penny for your thoughts", "struct": "Bạn đang nghĩ gì thế? (hỏi khi ai đó im lặng)" },
+      { "type": "positive", "label": "Actions speak louder than words", "struct": "Hành động quan trọng hơn lời nói" },
+      { "type": "positive", "label": "Barking up the wrong tree", "struct": "Nhầm lẫn, tìm giải pháp sai hướng" },
+      { "type": "positive", "label": "Beat around the bush", "struct": "Nói vòng vo tam quốc" },
+      { "type": "positive", "label": "Bite off more than you can chew", "struct": "Làm việc quá sức/Ôm đồm quá nhiều" },
+      { "type": "positive", "label": "Don't count your chickens before they hatch", "struct": "Đừng vội mừng khi mọi việc chưa xong" },
+      { "type": "positive", "label": "Don't put all your eggs in one basket", "struct": "Đừng dồn hết nguồn lực vào một chỗ (rủi ro cao)" },
+      { "type": "positive", "label": "Every cloud has a silver lining", "struct": "Trong cái rủi luôn có cái may" },
+      { "type": "positive", "label": "Get a taste of your own medicine", "struct": "Gậy ông đập lưng ông" },
+      { "type": "positive", "label": "Give someone the benefit of the doubt", "struct": "Tạm tin ai đó dù chưa chắc chắn" },
+      { "type": "positive", "label": "Kill two birds with one stone", "struct": "Một mũi tên trúng hai đích" },
+      { "type": "positive", "label": "Let sleeping dogs lie", "struct": "Đừng khơi lại chuyện cũ/rắc rối cũ" },
+      { "type": "positive", "label": "Take it with a grain of salt", "struct": "Đừng tin hoàn toàn lời ai nói" },
+      { "type": "positive", "label": "The best of both worlds", "struct": "Vẹn cả đôi đường" },
+      { "type": "positive", "label": "Don't judge a book by its cover", "struct": "Đừng đánh giá qua vẻ bề ngoài" },
+      { "type": "positive", "label": "Hit the nail on the head", "struct": "Nói đúng trọng tâm, nói chính xác" },
+      { "type": "positive", "label": "Piece of cake", "struct": "Rất dễ dàng" },
+      { "type": "positive", "label": "Speak of the devil", "struct": "Vừa nhắc Tào Tháo, Tào Tháo đến" },
+      { "type": "positive", "label": "Steal someone's thunder", "struct": "Cướp công lao/sự chú ý của ai đó" },
+      { "type": "positive", "label": "Under the weather", "struct": "Cảm thấy không khỏe" }
+    ],
+    "usage": ["Dùng trong các bài viết nghị luận.", "Dùng để khuyên bảo bạn bè."],
+    "signs": ["advice", "logic", "situation"],
+    "examples": [
+      { "en": "Stop beating around the bush and tell me the truth.", "vi": "Đừng nói vòng vo nữa, hãy nói thật cho tôi biết." },
+      { "en": "He hit the nail on the head with that comment.", "vi": "Anh ấy đã nói đúng trọng tâm với lời bình luận đó." }
+    ]
+  }
+}
